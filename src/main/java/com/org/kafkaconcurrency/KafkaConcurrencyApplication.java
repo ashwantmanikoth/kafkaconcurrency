@@ -18,7 +18,7 @@ public class KafkaConcurrencyApplication {
     System.out.println("ii");
     return args -> {
       for (int i = 0; i < 1000; i++) {
-        kafkaTemplate.send("topic", "Test message " + i);
+        kafkaTemplate.send("topic", "Testing never " + i);
       }
     };
   }
