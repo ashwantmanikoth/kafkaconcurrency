@@ -15,7 +15,6 @@ public class KafkaConcurrencyApplication {
 
   @Bean
   CommandLineRunner commandLineRunner(KafkaTemplate<String, String> kafkaTemplate) {
-    System.out.println("ii");
     return args -> {
       for (int i = 0; i < 1000; i++) {
         kafkaTemplate.send("topic", "Testing never " + i);
